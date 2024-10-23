@@ -64,7 +64,7 @@ export function Footer() {
                 </div>
               </div>
               <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400">
-                AtendeGênio
+                AtenGênio
               </span>
             </Link>
             <p className="text-sm text-gray-500 dark:text-gray-400 mb-4 max-w-sm">

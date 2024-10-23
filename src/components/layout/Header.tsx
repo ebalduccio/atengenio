@@ -73,7 +73,7 @@ export function Header() {
                             </motion.div>
                         </div>
                         <span className="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400">
-                            AtendeGênio
+                            AtenGênio
                         </span>
                     </Link>
 

@@ -3,7 +3,7 @@
 import { Container } from "@/components/layout/Container"
 import { motion } from "framer-motion"
 import { useState } from "react"
-import { ArrowRight, Settings, Brain, LineChart } from "lucide-react"
+import { Settings, Brain, LineChart } from "lucide-react"
 
 interface StepCardProps {
   number: string
@@ -30,14 +30,14 @@ const StepCard = ({ number, title, description, icon, gradient }: StepCardProps)
       <div className="absolute inset-0 rounded-2xl bg-white/10 dark:bg-black/10" />
       <div className="relative">
         <div className="flex items-center mb-4">
-          <motion.div 
+          <motion.div
             className="w-12 h-12 rounded-xl bg-white dark:bg-gray-800 flex items-center justify-center text-blue-600 shadow-inner"
             animate={{ rotate: isHovered ? 360 : 0 }}
             transition={{ duration: 0.5 }}
           >
             {icon}
           </motion.div>
-          <motion.div 
+          <motion.div
             className="ml-4 px-3 py-1 bg-white/20 dark:bg-gray-800/40 rounded-full text-sm font-medium"
             animate={{ x: isHovered ? 5 : 0 }}
           >
@@ -46,13 +46,6 @@ const StepCard = ({ number, title, description, icon, gradient }: StepCardProps)
         </div>
         <h3 className="text-xl font-bold mb-2 text-white dark:text-white">{title}</h3>
         <p className="text-white/80 dark:text-gray-300">{description}</p>
-        
-        <motion.div
-          className="mt-4 flex items-center text-white/90 text-sm font-medium"
-          animate={{ x: isHovered ? 5 : 0 }}
-        >
-          Saiba mais <ArrowRight className="ml-2 w-4 h-4" />
-        </motion.div>
       </div>
     </motion.div>
   )
@@ -98,7 +91,7 @@ export function HowItWorks() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <motion.span 
+          <motion.span
             className="inline-block px-4 py-1.5 mb-4 text-sm font-medium bg-white/10 text-white rounded-full"
             whileHover={{ scale: 1.05 }}
           >
@@ -115,7 +108,7 @@ export function HowItWorks() {
         <div className="grid gap-8 md:grid-cols-3 relative">
           {/* Linha conectora entre os cards */}
           <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500/50 via-purple-500/50 to-indigo-500/50 hidden md:block" />
-          
+
           {steps.map((step, index) => (
             <StepCard key={index} {...step} />
           ))}
