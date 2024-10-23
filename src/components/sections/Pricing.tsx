@@ -278,7 +278,7 @@ export function Pricing() {
           transition={{ duration: 0.5 }}
           className="relative grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto"
         >
-          {plans.map((plan, index) => (
+          {plans.map((plan) => (
             <PricingCard 
               key={plan.id}
               {...plan}

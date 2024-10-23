@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { BrainCircuitIcon } from "@/components/icons"
 import { Container } from "./Container"
 import { Button } from "@/components/ui/button"
-import { Menu, X, ChevronRight } from "lucide-react"
+import { ChevronRight } from "lucide-react"
 
 const menuItems = [
     {

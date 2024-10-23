@@ -5,25 +5,6 @@ import { Container } from "@/components/layout/Container"
 import { motion } from "framer-motion"
 import { ArrowRight, Sparkles, MessageSquare, Bot } from "lucide-react"
 
-interface StatItemProps {
-  value: string
-  label: string
-}
-
-function StatItem({ value, label }: StatItemProps) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="flex flex-col items-center p-4"
-    >
-      <span className="text-3xl font-bold text-blue-600 mb-1">{value}</span>
-      <span className="text-sm text-gray-600 dark:text-gray-400">{label}</span>
-    </motion.div>
-  )
-}
-
 function FeatureTag({ children }: { children: React.ReactNode }) {
   return (
     <motion.div
