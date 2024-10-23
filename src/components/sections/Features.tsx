@@ -77,7 +77,7 @@ const features = [
     {
         icon: <MessageSquareIcon className="h-8 w-8 text-pink-600" />,
         title: "Chat Multicanal",
-        description: "Integração com WhatsApp, site e redes sociais para atendimento unificado.",
+        description: "Integração com WhatsApp e sites para atendimento unificado.",
         gradient: "bg-gradient-to-r from-pink-500 to-rose-500"
     },
     {
