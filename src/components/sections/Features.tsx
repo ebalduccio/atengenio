@@ -9,7 +9,6 @@ import {
     MessageSquareIcon,
     UsersIcon,
     LineChartIcon,
-    ArrowRightIcon,
 } from "@/components/icons"
 
 interface FeatureCardProps {
