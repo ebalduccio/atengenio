@@ -1,4 +1,3 @@
-// src/components/sections/hero.tsx
 "use client"
 
 import { useState, useEffect } from "react"
@@ -24,16 +23,32 @@ export function Hero() {
 
   return (
     <section className="relative w-full overflow-hidden bg-white dark:bg-gray-900 pt-20 md:pt-24 lg:pt-32 xl:pt-48">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-grid-blue-500/[0.02] [mask-image:linear-gradient(to_bottom,white,transparent)] dark:bg-grid-white/[0.02]" />
+      {/* Background Video */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute w-full h-full object-cover "
+          style={{ filter: 'brightness(0.7)' }}
+        >
+          <source src="/videos/hero1.mp4" type="video/mp4" />
+        </video>
+        {/* Overlay para escurecer o vídeo e melhorar a legibilidade */}
+        <div className="absolute inset-0 bg-black/40" />
+      </div>
+
+      {/* Background Pattern (mantido com opacidade reduzida) */}
+      {/* <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full bg-grid-blue-500/[0.01] [mask-image:linear-gradient(to_bottom,white,transparent)] dark:bg-grid-white/[0.01]" />
         <div 
-          className="absolute inset-0 bg-gradient-to-r from-blue-50/50 via-transparent to-blue-50/50 dark:from-blue-900/20 dark:via-transparent dark:to-blue-900/20"
+          className="absolute inset-0 bg-gradient-to-r from-blue-50/30 via-transparent to-blue-50/30 dark:from-blue-900/10 dark:via-transparent dark:to-blue-900/10"
           style={{
             transform: `translate(${mousePosition.x * 0.02}px, ${mousePosition.y * 0.02}px)`,
           }}
         />
-      </div>
+      </div> */}
 
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -81,14 +96,14 @@ export function Hero() {
         </motion.div>
       </div>
 
-      <Container>
+      <Container className="relative z-10"> {/* Added z-10 to ensure content stays above video */}
         <div className="relative flex flex-col items-center space-y-8 text-center">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center rounded-full px-3 py-1 text-sm font-medium bg-blue-50 text-blue-600 ring-1 ring-inset ring-blue-600/20 dark:bg-blue-900/30"
+            className="inline-flex items-center rounded-full px-3 py-1 text-sm font-medium bg-blue-50/90 text-blue-600 ring-1 ring-inset ring-blue-600/20 dark:bg-blue-900/80"
           >
             <SparklesIcon className="mr-1 h-4 w-4" />
             Potencialize seu negócio com IA
@@ -102,10 +117,10 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
             >
-              <span className="block bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+              <span className="block bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300">
                 Automatize seu
               </span>
-              <span className="block bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-blue-600">
+              <span className="block bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-blue-400">
                 Atendimento com IA
               </span>
             </motion.h1>
@@ -114,7 +129,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="mx-auto max-w-2xl text-lg sm:text-xl text-gray-600 dark:text-gray-300"
+              className="mx-auto max-w-2xl text-lg sm:text-xl text-gray-100 dark:text-gray-200"
             >
               Transforme seu negócio com um sistema inteligente de agendamento e atendimento.
               Reduza custos, aumente a satisfação dos clientes e gerencie tudo em um só lugar.
@@ -137,7 +152,7 @@ export function Hero() {
               <Button
                 size="lg"
                 variant="outline"
-                className="w-full sm:w-auto border-2 border-blue-600 text-blue-600 hover:bg-blue-50 text-lg px-8"
+                className="w-full sm:w-auto border-2 border-blue-400 text-blue-400 hover:bg-blue-400/10 text-lg px-8"
               >
                 Agendar Demo
               </Button>
@@ -156,8 +171,8 @@ export function Hero() {
                 { metric: "24/7", label: "Suporte" },
               ].map((item) => (
                 <div key={item.label} className="text-center mb-16">
-                  <div className="text-3xl font-bold text-blue-600">{item.metric}</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">{item.label}</div>
+                  <div className="text-3xl font-bold text-blue-400">{item.metric}</div>
+                  <div className="text-sm text-gray-200 dark:text-gray-300">{item.label}</div>
                 </div>
               ))}
             </motion.div>
@@ -166,7 +181,7 @@ export function Hero() {
       </Container>
 
       {/* Bottom Gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white dark:from-gray-900" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/80" />
     </section>
   )
 }
