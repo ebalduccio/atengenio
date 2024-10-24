@@ -9,6 +9,7 @@ import {
     MessageSquareIcon,
     UsersIcon,
     LineChartIcon,
+    SmartphoneIcon,
 } from "@/components/icons"
 
 interface FeatureCardProps {
@@ -66,6 +67,12 @@ const features = [
         title: "Atendimento com IA",
         description: "Chatbot inteligente que responde dúvidas, faz triagem e direciona clientes automaticamente.",
         gradient: "bg-gradient-to-r from-indigo-500 to-purple-500"
+    },
+    {
+        icon: <SmartphoneIcon className="h-6 w-6 text-violet-600" />,
+        title: "Apps iOS e Android",
+        description: "Aplicativos nativos para iOS e Android permitindo agendamentos e gestão completa pelo celular.",
+        gradient: "bg-gradient-to-r from-violet-500 to-purple-500"
     },
     {
         icon: <LayoutDashboardIcon className="h-6 w-6 text-purple-600" />,
@@ -126,11 +133,17 @@ export function Features() {
                     <div className="relative lg:grid lg:grid-cols-2 lg:gap-12 items-center">
                         {/* Features Cards */}
                         <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
-                            {features.map((feature, index) => (
+                            <div className="md:col-span-2">
+                                <FeatureCard
+                                    {...features[2]}
+                                    index={2}
+                                />
+                            </div>
+                            {features.filter((_, index) => index !== 2).map((feature, index) => (
                                 <FeatureCard
                                     key={index}
                                     {...feature}
-                                    index={index}
+                                    index={index > 2 ? index + 1 : index}
                                 />
                             ))}
                         </div>
