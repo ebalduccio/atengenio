@@ -15,31 +15,31 @@ import {
 const footerLinks = {
   produto: [
     { label: "Recursos", href: "#features" },
-    { label: "Integrações", href: "#" },
-    { label: "Casos de Sucesso", href: "#" },
+    // { label: "Integrações", href: "#" },
+    { label: "Como Funciona", href: "#how-it-works" },
     { label: "Preços", href: "#pricing" },
-    { label: "Atualizações", href: "#" },
+    // { label: "Atualizações", href: "#" },
   ],
-  empresa: [
-    { label: "Sobre", href: "#" },
-    { label: "Blog", href: "#" },
-    { label: "Carreiras", href: "#" },
-    { label: "Imprensa", href: "#" },
-    { label: "Parceiros", href: "#" },
-  ],
+  // empresa: [
+  //   { label: "Sobre", href: "#" },
+  //   { label: "Blog", href: "#" },
+  //   { label: "Carreiras", href: "#" },
+  //   { label: "Imprensa", href: "#" },
+  //   { label: "Parceiros", href: "#" },
+  // ],
   suporte: [
     { label: "Central de Ajuda", href: "#" },
     { label: "Documentação", href: "#" },
-    { label: "Status", href: "#" },
-    { label: "API", href: "#" },
-    { label: "Comunidade", href: "#" },
+    // { label: "Status", href: "#" },
+    // { label: "API", href: "#" },
+    // { label: "Comunidade", href: "#" },
   ],
   legal: [
     { label: "Termos de Uso", href: "#" },
     { label: "Privacidade", href: "#" },
     { label: "Cookies", href: "#" },
-    { label: "Licenças", href: "#" },
-    { label: "Segurança", href: "#" },
+    // { label: "Licenças", href: "#" },
+    // { label: "Segurança", href: "#" },
   ],
 } as const
 
