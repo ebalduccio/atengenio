@@ -1,25 +1,24 @@
 "use client"
 
-import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Container } from "@/components/layout/Container"
 import { motion } from "framer-motion"
 import { BrainCircuitIcon, CalendarCheckIcon, MessageSquareIcon, SparklesIcon } from "@/components/icons"
 
 export function Hero() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  // const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({
-        x: e.clientX,
-        y: e.clientY,
-      })
-    }
+  // useEffect(() => {
+  //   const handleMouseMove = (e: MouseEvent) => {
+  //     setMousePosition({
+  //       x: e.clientX,
+  //       y: e.clientY,
+  //     })
+  //   }
 
-    window.addEventListener("mousemove", handleMouseMove)
-    return () => window.removeEventListener("mousemove", handleMouseMove)
-  }, [])
+  //   window.addEventListener("mousemove", handleMouseMove)
+  //   return () => window.removeEventListener("mousemove", handleMouseMove)
+  // }, [])
 
   return (
     <section className="relative w-full overflow-hidden bg-white dark:bg-gray-900 pt-20 md:pt-24 lg:pt-32 xl:pt-48">
