@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Container } from "@/components/layout/Container"
 import { motion } from "framer-motion"
 import { BrainCircuitIcon, CalendarCheckIcon, MessageSquareIcon, SparklesIcon } from "@/components/icons"
+import Link from "next/link"
 
 export function Hero() {
   // const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -141,20 +142,15 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
-              <Button
-                size="lg"
-                className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-lg px-8"
-              >
-                Começar Agora
-                <span className="ml-2">→</span>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="w-full sm:w-auto border-2 border-blue-400 text-blue-400 hover:bg-blue-400/10 text-lg px-8"
-              >
-                Agendar Demo
-              </Button>
+              <Link href={'#pricing'}>
+                <Button
+                  size="lg"
+                  className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-lg px-8"
+                >
+                  Começar Agora
+                  <span className="ml-2">→</span>
+                </Button>
+              </Link>
             </motion.div>
 
             {/* Metrics */}
