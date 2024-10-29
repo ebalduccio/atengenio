@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { CheckCircle, Package, Truck } from "lucide-react"
+import { CheckCircle, Truck } from "lucide-react"
 import Link from "next/link"
 
 export default function SuccessPage() {

@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { Container } from "@/components/layout/Container"
 import {
     CalendarCheckIcon,
@@ -171,10 +172,13 @@ export function Features() {
                                 
                                 {/* Phone Frame */}
                                 <div className="relative z-10 transform lg:scale-110 lg:translate-x-12">
-                                    <img 
-                                        src="/images/mockup.png" 
-                                        alt="App mockup" 
+                                    <Image 
+                                        src="/images/mockup.png"
+                                        alt="App mockup"
+                                        width={375}
+                                        height={812}
                                         className="w-full h-auto"
+                                        priority
                                     />
                                     {/* Screen Reflection */}
                                     <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/10 to-white/0 rounded-[inherit]" />

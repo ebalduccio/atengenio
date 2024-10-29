@@ -43,12 +43,12 @@ const footerLinks = {
   // ],
 } as const
 
-const socialLinks = [
-  { Icon: LinkedinIcon, href: "#", label: "LinkedIn" },
-  { Icon: TwitterIcon, href: "#", label: "Twitter" },
-  { Icon: InstagramIcon, href: "#", label: "Instagram" },
-  { Icon: YoutubeIcon, href: "#", label: "YouTube" },
-] as const
+// const socialLinks = [
+//   { Icon: LinkedinIcon, href: "#", label: "LinkedIn" },
+//   { Icon: TwitterIcon, href: "#", label: "Twitter" },
+//   { Icon: InstagramIcon, href: "#", label: "Instagram" },
+//   { Icon: YoutubeIcon, href: "#", label: "YouTube" },
+// ] as const
 
 export function Footer() {
   return (

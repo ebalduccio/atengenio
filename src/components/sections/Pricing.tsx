@@ -124,7 +124,6 @@ function PricingCard({
   features,
   popular = false,
   customPrice = false,
-  onSelectPlan,
   isAnnual,
   className = "",
 }: PricingCardProps) {
@@ -142,10 +141,10 @@ function PricingCard({
     }).format(value)
   }
 
-  const calculatePrice = (price: { monthly: number; annual: number } | null) => {
-    if (!price) return null
-    return isAnnual ? price.annual : price.monthly
-  }
+  // const calculatePrice = (price: { monthly: number; annual: number } | null) => {
+  //   if (!price) return null
+  //   return isAnnual ? price.annual : price.monthly
+  // }
 
   const handleSelectPlan = () => {
     if (customPrice) {
