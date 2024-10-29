@@ -94,9 +94,11 @@ export function Header() {
                             </Link>
                         ))}
                         <div className="flex items-center space-x-2 ml-4">
-                            <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
-                                Começar
-                            </Button>
+                            <Link href={'#pricing'}>
+                                <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
+                                    Começar
+                                </Button>
+                            </Link>
                         </div>
                     </nav>
 
@@ -183,9 +185,6 @@ export function Header() {
                                         >
                                             Começar
                                         </Button>
-                                        <div className="text-center text-sm text-gray-500 dark:text-gray-400">
-                                            Experimente gratuitamente por 14 dias
-                                        </div>
                                     </motion.div>
                                 </nav>
                             </motion.div>

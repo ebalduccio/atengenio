@@ -27,20 +27,20 @@ const footerLinks = {
   //   { label: "Imprensa", href: "#" },
   //   { label: "Parceiros", href: "#" },
   // ],
-  suporte: [
-    { label: "Central de Ajuda", href: "#" },
-    { label: "Documentação", href: "#" },
-    // { label: "Status", href: "#" },
-    // { label: "API", href: "#" },
-    // { label: "Comunidade", href: "#" },
-  ],
-  legal: [
-    { label: "Termos de Uso", href: "#" },
-    { label: "Privacidade", href: "#" },
-    { label: "Cookies", href: "#" },
-    // { label: "Licenças", href: "#" },
-    // { label: "Segurança", href: "#" },
-  ],
+  // suporte: [
+  //   { label: "Central de Ajuda", href: "#" },
+  //   { label: "Documentação", href: "#" },
+  //   // { label: "Status", href: "#" },
+  //   // { label: "API", href: "#" },
+  //   // { label: "Comunidade", href: "#" },
+  // ],
+  // legal: [
+  //   { label: "Termos de Uso", href: "#" },
+  //   { label: "Privacidade", href: "#" },
+  //   { label: "Cookies", href: "#" },
+  //   // { label: "Licenças", href: "#" },
+  //   // { label: "Segurança", href: "#" },
+  // ],
 } as const
 
 const socialLinks = [
@@ -117,7 +117,7 @@ export function Footer() {
               © 2024 AtendeGênio. Todos os direitos reservados.
             </p>
             <div className="flex items-center gap-4">
-              {socialLinks.map(({ Icon, href, label }) => (
+              {/* {socialLinks.map(({ Icon, href, label }) => (
                 <Link 
                   key={label}
                   href={href}
@@ -126,7 +126,7 @@ export function Footer() {
                 >
                   <Icon className="h-5 w-5" />
                 </Link>
-              ))}
+              ))} */}
             </div>
           </div>
         </div>
