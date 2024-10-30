@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
-import { MessageCircle, Send, X, Smile, Check, Paperclip } from "lucide-react"
+import { MessageCircle, Send, X, Smile, Check } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
 type Message = {
