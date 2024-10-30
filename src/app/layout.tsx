@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { type Viewport } from "next"
 import localFont from "next/font/local"
 import "./globals.css"
+import Chat from "@/components/Chat"
 // import Chat from "@/components/Chat"
 
 const geistSans = localFont({
@@ -123,7 +124,7 @@ export default function RootLayout({
       >
         <div className="relative min-h-screen">
           {children}
-          {/* <Chat /> */}
+          <Chat />
         </div>
       </body>
     </html>

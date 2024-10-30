@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Container } from "@/components/layout/Container"
 import { motion } from "framer-motion"
 import { ArrowRight, Sparkles, MessageSquare, Bot } from "lucide-react"
+import Link from "next/link"
 
 function FeatureTag({ children }: { children: React.ReactNode }) {
   return (
@@ -79,21 +80,16 @@ export function CTA() {
             transition={{ delay: 0.2 }}
             className="flex flex-col sm:flex-row gap-4 w-full justify-center"
           >
-            <Button 
-              size="lg" 
-              className="group bg-blue-600 hover:bg-blue-700 text-lg px-8"
-            >
-              Começar
-              <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="group border-2 border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 text-lg px-8"
-            >
-              Falar com Consultor
-              <MessageSquare className="w-4 h-4 ml-2 transition-transform group-hover:scale-110" />
-            </Button>
+            <Link href={'#pricing'}>
+              <Button
+                size="lg"
+                className="group bg-blue-600 hover:bg-blue-700 text-lg px-8"
+              >
+                Começar
+                <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </Link>
+
           </motion.div>
         </div>
       </Container>

@@ -62,8 +62,12 @@ const plans: PricingPlan[] = [
       { text: "Até 250 agendamentos/mês", included: true },
       { text: "Chatbot IA básico com Whatsapp", included: true },
       { text: "Suporte por email", included: true },
-      { text: "Dashboard simples", included: false },
+      { text: "Dashboard simples", included: true },
       { text: "API access", included: false },
+      { text: "Dashboard completo", included: false },
+      { text: "Suporte prioritário", included: false },
+      { text: "Landing page", included: false },
+      { text: "Relatórios", included: false },
     ]
   },
   {
@@ -77,7 +81,7 @@ const plans: PricingPlan[] = [
     },
     features: [
       { text: "Até 500 agendamentos/mês", included: true },
-      { text: "Chatbot IA avançado", included: true },
+      { text: "Chatbot IA com Whatsapp & Landing page", included: true },
       { text: "Dashboard completo", included: true },
       { text: "Suporte prioritário", included: true },
       { text: "Relatórios", included: true },
@@ -99,12 +103,12 @@ const plans: PricingPlan[] = [
     customPrice: false,
     features: [
       { text: "Agendamentos ilimitados", included: true },
-      { text: "IA personalizada", included: true },
+      { text: "Chatbot IA com Whatsapp & Website", included: true },
       { text: "Dashboard personalizado", included: true },
       { text: "API disponível", included: true },
       { text: "Suporte avançado", included: true },
       { text: "Treinamento dedicado", included: true },
-      { text: "Website completo do 0", included: true },
+      { text: "Website completo do 0 ou Landing page", included: true },
       { text: "Aplicativo IOS & Android", included: true },
     ]
   }
