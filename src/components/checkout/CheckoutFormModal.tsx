@@ -1,4 +1,3 @@
-// components/checkout/CheckoutFormModal.tsx
 import { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
@@ -35,10 +34,7 @@ export function CheckoutFormModal({
     const { toast } = useToast();
 
     const formatWhatsApp = (value: string) => {
-        // Remove tudo que não for número
         const numbers = value.replace(/\D/g, '');
-
-        // Aplica a máscara (XX) XXXXX-XXXX
         if (numbers.length <= 11) {
             return numbers.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
         }
@@ -60,12 +56,13 @@ export function CheckoutFormModal({
     }) => {
         try {
             const customersRef = collection(db, 'customers');
-            await addDoc(customersRef, {
+            const docRef = await addDoc(customersRef, {
                 ...data,
                 status: 'pending',
                 createdAt: serverTimestamp(),
                 updatedAt: serverTimestamp()
             });
+            return docRef.id;
         } catch (error) {
             console.error('Error saving to Firebase:', error);
             throw error;
@@ -84,7 +81,6 @@ export function CheckoutFormModal({
             return;
         }
 
-        // Validação básica de email
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
             toast({
@@ -95,7 +91,6 @@ export function CheckoutFormModal({
             return;
         }
 
-        // Validação do WhatsApp (deve ter pelo menos 14 caracteres com a formatação)
         if (whatsapp.replace(/\D/g, '').length < 11) {
             toast({
                 title: "Erro",
@@ -107,8 +102,8 @@ export function CheckoutFormModal({
 
         setIsLoading(true);
         try {
-            // Primeiro salva no Firebase
-            await saveToFirebase({
+            // Salva no Firebase e obtém o ID do documento
+            const customerId = await saveToFirebase({
                 email,
                 whatsapp,
                 planId,
@@ -118,8 +113,21 @@ export function CheckoutFormModal({
                 setupFee
             });
 
-            // Depois prossegue com o checkout
-            await onSubmit({ email, whatsapp });
+            // Chama a função onSubmit passada como prop
+            await onSubmit({
+                email,
+                whatsapp
+            });
+
+            // Fecha o modal após o sucesso
+            onClose();
+
+            // Mostra mensagem de sucesso
+            toast({
+                title: "Sucesso!",
+                description: "Redirecionando para o checkout...",
+            });
+
         } catch (error) {
             console.error('Error:', error);
             toast({
