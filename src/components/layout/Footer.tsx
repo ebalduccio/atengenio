@@ -1,7 +1,7 @@
 // src/components/layout/footer.tsx
 import Link from "next/link"
 import { Container } from "./Container"
-import { 
+import {
   BrainCircuitIcon,
   MailIcon,
   PhoneIcon,
@@ -64,18 +64,19 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-sm text-gray-500 dark:text-gray-400 mb-4 max-w-sm">
-              Transforme seu atendimento com inteligência artificial. 
-              Automatize agendamentos, melhore a satisfação dos clientes e 
+              Transforme seu atendimento com inteligência artificial.
+              Automatize agendamentos, melhore a satisfação dos clientes e
               impulsione seus resultados.
             </p>
             <div className="space-y-3 text-sm text-gray-500 dark:text-gray-400">
               <a href="mailto:contato@atende.ai" className="flex items-center gap-2 hover:text-blue-600 transition-colors">
                 <MailIcon className="h-4 w-4" />
-                contato@agende.com
+                Ricardo Hasselmann,
+                melclarapeu@gmail.com
               </a>
               <a href="tel:+551199999999" className="flex items-center gap-2 hover:text-blue-600 transition-colors">
                 <PhoneIcon className="h-4 w-4" />
-                (71) 99348-8260
+                (71) 99113-4139
               </a>
               <p className="flex items-center gap-2">
                 <MapPinIcon className="h-4 w-4" />
@@ -93,7 +94,7 @@ export function Footer() {
               <ul className="space-y-2">
                 {links.map((link) => (
                   <li key={link.label}>
-                    <Link 
+                    <Link
                       href={link.href}
                       className="text-sm text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
                     >
