@@ -10,7 +10,11 @@ import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 interface CheckoutFormModalProps {
     isOpen: boolean;
     onClose: () => void;
-    onSubmit: (data: { email: string; whatsapp: string }) => Promise<void>;
+    onSubmit: (data: { 
+        email: string; 
+        whatsapp: string;
+        customerId: string;  // Adicionado customerId
+    }) => Promise<void>;
     planName: string;
     planPrice: string;
     isAnnual: boolean;
@@ -113,10 +117,11 @@ export function CheckoutFormModal({
                 setupFee
             });
 
-            // Chama a função onSubmit passada como prop
-            await onSubmit({
-                email,
-                whatsapp
+            // Chama a função onSubmit passando também o customerId
+            await onSubmit({ 
+                email, 
+                whatsapp,
+                customerId  // Incluindo o customerId no onSubmit
             });
 
             // Fecha o modal após o sucesso
